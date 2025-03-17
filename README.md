@@ -1,1 +1,23 @@
 操作fasta文件的常用命令
+options:
+-h，--help  how this help message and exit √
+-n <STR>  arget ID exactally 根据目标 ID 过滤序列
+-еx <STR> excluded name 根据排除名称过滤序列
+-rg <STR>target regx word to find sequences 根据正则表达式过滤序列
+-nl FILE selecting sequences by a ID list √ 从指定文件中读取 ID 列表，并返回一个集合（set），用于后续的序列筛选
+-exl FILE selecting sequences by an excluding list根据排除列表过滤序列
+-rgl FILE selecting sequences by a regular expression list根据正则表达式列表过滤序列
+-ap <STR> add a specific prefix to ID 为 ID 添加前缀 加字母
+-sep <STR> separator for adding aspecific prefix to ID 添加字段分隔符
+-pOS <INT> position of tag you add 指定位置
+-lgt <INT> eddeal with by length,select sequences by larger than [INT] bp 根据长度筛选序列，最短
+-lle <INT> deal with by length,select sequences by smaller than [INT] bp 最长
+-a2u change format,aligned sequence to unaligned 将对齐序列转换为未对齐格式
+-rW change format,multi-line to single line 将多行序列转换为单行格式
+-tr translate fasta into protein(CDS only) 将 CDS 序列翻译为蛋白质√
+-codon CODON codon table usage(CDS only,with -tr)
+-cutf <INT> cut fasta into files by file number根据文件数量分割文件
+-cuts <INT> cut fasta into files by specific sequence number根据序列数量分割文件
+-0 <STR> output file or outdir for -cutf/-cuts 将处理后的序列保存到指定的输出文件中
+-z output a gzip type file 将处理后的文件保存为gzip 压缩文件
+-sta basic statistic of fasta 计算基本统计信息

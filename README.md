@@ -1,2 +1,1 @@
-# DYL1214
-My personal repository
+操作fasta文件的常用命令
